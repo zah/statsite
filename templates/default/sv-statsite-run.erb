@@ -1,2 +1,5 @@
 #!/bin/sh
-exec chpst -l /tmp/statsite.lock -u statsite -- /opt/statsite/statsite -f <%= node[:statsite][:conf]%>
+
+cd <%=@options[:statsite_path]%>
+exec chpst -l /tmp/<%=@options[:service_name]%>.lock -u statsite -- ./statsite -f <%=@options[:conf]%>
+

@@ -1,15 +1,15 @@
 [statsite]
-port = <%= node[:statsite][:port] %>
-udp_port = <%= node[:statsite][:port] %>
-log_level = <%= node[:statsite][:loglevel] %>
-flush_interval = <%= node[:statsite][:flush_interval] %>
-timer_eps = <%= node[:statsite][:timer_eps] %>
-<% if node[:statsite][:stream_command] -%>
-stream_cmd = <%= node[:statsite][:stream_command] %>
+port = <%= @port %>
+udp_port = <%= @port %>
+log_level = <%= @loglevel %>
+flush_interval = <%= @flush_interval %>
+timer_eps = <%= @timer_eps %>
+<% if @stream_command -%>
+stream_cmd = <%= @stream_command %>
 <% end -%>
 
-<% if node[:statsite][:histogram] -%>
-	<% node[:statsite][:histogram].each do |section,opts| -%>
+<% if @histogram -%>
+	<% @histogram.each do |section,opts| -%>
 [<%= section.to_s %>]
 		<% opts.each do |key,val| -%>
 <%= key.to_s %>=<%= val.to_s %>

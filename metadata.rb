@@ -1,5 +1,5 @@
-maintainer       "Heavy Water Ops, Inc"
-maintainer_email "ops@hw-ops.com"
+maintainer       "Zahary Karadjov"
+maintainer_email "zahary@gmail.com"
 license          "Apache 2.0"
 description      "Installs/Configures statsite"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
